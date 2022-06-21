@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-
-import 'home_page.dart';
+import 'package:persistant_storage/ui/dog_list_screen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -26,7 +26,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const DogListScreen(),
     );
   }
 }
