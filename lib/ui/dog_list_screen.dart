@@ -55,6 +55,10 @@ class _DogListScreenState extends State<DogListScreen> {
             ),
           );
 
+          // load lai cái list
+          final dogInDb = await _dogStorage.getAllDog();
+          _dogList.clear();
+          _dogList.addAll(dogInDb);
           setState(() {});
         },
         child: Text('Add'),
